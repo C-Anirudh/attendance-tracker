@@ -66,7 +66,7 @@ def fetch_relevant_ssid(wifi_ssid_list):
 def mark_attendance(wifi_ssid_list, credentials):
     data = {'username': credentials['username'], 'password': credentials['password'], 'list': wifi_ssid_list}
     variables = json.dumps(data)
-    url = 'https://10.113.8.108/'
+    url = 'https://10.113.8.108/?'
     mutation = '''
     mutation logAttendance($username: String!, $password: String!, $list: [String]) {
         LogAttendance(username: $username, password: $password, list: $list)
